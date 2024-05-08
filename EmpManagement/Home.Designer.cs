@@ -33,17 +33,20 @@
 			label1 = new Label();
 			label2 = new Label();
 			panel1 = new Panel();
-			label3 = new Label();
-			pictureBox2 = new PictureBox();
-			label4 = new Label();
 			label5 = new Label();
 			pictureBox4 = new PictureBox();
+			label4 = new Label();
 			pictureBox3 = new PictureBox();
+			label3 = new Label();
+			pictureBox2 = new PictureBox();
+			pictureBox5 = new PictureBox();
+			label6 = new Label();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			panel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+			((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
 			SuspendLayout();
 			// 
 			// pictureBox1
@@ -93,38 +96,6 @@
 			panel1.Size = new Size(803, 315);
 			panel1.TabIndex = 0;
 			// 
-			// label3
-			// 
-			label3.AutoSize = true;
-			label3.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-			label3.ForeColor = Color.OrangeRed;
-			label3.Location = new Point(124, 221);
-			label3.Name = "label3";
-			label3.Size = new Size(126, 23);
-			label3.TabIndex = 4;
-			label3.Text = "Empregados";
-			// 
-			// pictureBox2
-			// 
-			pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-			pictureBox2.Location = new Point(134, 93);
-			pictureBox2.Name = "pictureBox2";
-			pictureBox2.Size = new Size(99, 110);
-			pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-			pictureBox2.TabIndex = 3;
-			pictureBox2.TabStop = false;
-			// 
-			// label4
-			// 
-			label4.AutoSize = true;
-			label4.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-			label4.ForeColor = Color.OrangeRed;
-			label4.Location = new Point(374, 221);
-			label4.Name = "label4";
-			label4.Size = new Size(106, 23);
-			label4.TabIndex = 6;
-			label4.Text = "Visualizar";
-			// 
 			// label5
 			// 
 			label5.AutoSize = true;
@@ -146,6 +117,17 @@
 			pictureBox4.TabIndex = 7;
 			pictureBox4.TabStop = false;
 			// 
+			// label4
+			// 
+			label4.AutoSize = true;
+			label4.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+			label4.ForeColor = Color.OrangeRed;
+			label4.Location = new Point(374, 221);
+			label4.Name = "label4";
+			label4.Size = new Size(106, 23);
+			label4.TabIndex = 6;
+			label4.Text = "Visualizar";
+			// 
 			// pictureBox3
 			// 
 			pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
@@ -156,12 +138,56 @@
 			pictureBox3.TabIndex = 5;
 			pictureBox3.TabStop = false;
 			// 
+			// label3
+			// 
+			label3.AutoSize = true;
+			label3.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+			label3.ForeColor = Color.OrangeRed;
+			label3.Location = new Point(124, 221);
+			label3.Name = "label3";
+			label3.Size = new Size(126, 23);
+			label3.TabIndex = 4;
+			label3.Text = "Empregados";
+			// 
+			// pictureBox2
+			// 
+			pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+			pictureBox2.Location = new Point(134, 93);
+			pictureBox2.Name = "pictureBox2";
+			pictureBox2.Size = new Size(99, 110);
+			pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+			pictureBox2.TabIndex = 3;
+			pictureBox2.TabStop = false;
+			// 
+			// pictureBox5
+			// 
+			pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+			pictureBox5.Location = new Point(21, 409);
+			pictureBox5.Name = "pictureBox5";
+			pictureBox5.Size = new Size(34, 42);
+			pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+			pictureBox5.TabIndex = 3;
+			pictureBox5.TabStop = false;
+			// 
+			// label6
+			// 
+			label6.AutoSize = true;
+			label6.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+			label6.ForeColor = Color.White;
+			label6.Location = new Point(61, 419);
+			label6.Name = "label6";
+			label6.Size = new Size(48, 23);
+			label6.TabIndex = 4;
+			label6.Text = "Sair";
+			// 
 			// Home
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.OrangeRed;
-			ClientSize = new Size(800, 432);
+			ClientSize = new Size(800, 454);
+			Controls.Add(label6);
+			Controls.Add(pictureBox5);
 			Controls.Add(label1);
 			Controls.Add(pictureBox1);
 			Controls.Add(panel1);
@@ -171,9 +197,10 @@
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+			((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -189,5 +216,7 @@
 		private PictureBox pictureBox3;
 		private Label label3;
 		private PictureBox pictureBox2;
+		private PictureBox pictureBox5;
+		private Label label6;
 	}
 }

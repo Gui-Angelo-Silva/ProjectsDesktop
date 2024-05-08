@@ -138,6 +138,7 @@
 			Controls.Add(label1);
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "Login";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Login";
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			ResumeLayout(false);
