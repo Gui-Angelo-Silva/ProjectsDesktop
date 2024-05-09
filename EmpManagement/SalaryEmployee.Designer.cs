@@ -1,6 +1,6 @@
 ﻿namespace EmpManagement
 {
-	partial class Salary
+	partial class SalaryEmployee
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Salary));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalaryEmployee));
 			pictureBox2 = new PictureBox();
 			btnExit = new PictureBox();
 			label1 = new Label();
@@ -36,8 +36,8 @@
 			SalarySlip = new RichTextBox();
 			btnHome = new Button();
 			btnSearch = new Button();
-			btnEdit = new Button();
-			btnAdd = new Button();
+			btnView = new Button();
+			btnPrint = new Button();
 			EmpDaysTb = new TextBox();
 			label7 = new Label();
 			label6 = new Label();
@@ -46,6 +46,8 @@
 			lblNameEmp = new Label();
 			EmpIdTb = new TextBox();
 			label2 = new Label();
+			printDocument1 = new System.Drawing.Printing.PrintDocument();
+			printPreviewDialog1 = new PrintPreviewDialog();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			((System.ComponentModel.ISupportInitialize)btnExit).BeginInit();
 			panel1.SuspendLayout();
@@ -90,8 +92,8 @@
 			panel1.Controls.Add(SalarySlip);
 			panel1.Controls.Add(btnHome);
 			panel1.Controls.Add(btnSearch);
-			panel1.Controls.Add(btnEdit);
-			panel1.Controls.Add(btnAdd);
+			panel1.Controls.Add(btnView);
+			panel1.Controls.Add(btnPrint);
 			panel1.Controls.Add(EmpDaysTb);
 			panel1.Controls.Add(label7);
 			panel1.Controls.Add(label6);
@@ -108,9 +110,11 @@
 			// SalarySlip
 			// 
 			SalarySlip.BorderStyle = BorderStyle.None;
-			SalarySlip.Location = new Point(473, 52);
+			SalarySlip.Font = new Font("Mongolian Baiti", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			SalarySlip.ForeColor = Color.DarkBlue;
+			SalarySlip.Location = new Point(434, 52);
 			SalarySlip.Name = "SalarySlip";
-			SalarySlip.Size = new Size(663, 397);
+			SalarySlip.Size = new Size(702, 397);
 			SalarySlip.TabIndex = 27;
 			SalarySlip.Text = "";
 			// 
@@ -142,31 +146,33 @@
 			btnSearch.UseVisualStyleBackColor = false;
 			btnSearch.Click += btnSearch_Click;
 			// 
-			// btnEdit
+			// btnView
 			// 
-			btnEdit.BackColor = Color.OrangeRed;
-			btnEdit.Cursor = Cursors.Hand;
-			btnEdit.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold, GraphicsUnit.Point);
-			btnEdit.ForeColor = Color.White;
-			btnEdit.Location = new Point(135, 382);
-			btnEdit.Name = "btnEdit";
-			btnEdit.Size = new Size(96, 37);
-			btnEdit.TabIndex = 24;
-			btnEdit.Text = "Visualizar";
-			btnEdit.UseVisualStyleBackColor = false;
+			btnView.BackColor = Color.OrangeRed;
+			btnView.Cursor = Cursors.Hand;
+			btnView.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			btnView.ForeColor = Color.White;
+			btnView.Location = new Point(135, 382);
+			btnView.Name = "btnView";
+			btnView.Size = new Size(96, 37);
+			btnView.TabIndex = 24;
+			btnView.Text = "Visualizar";
+			btnView.UseVisualStyleBackColor = false;
+			btnView.Click += btnView_Click;
 			// 
-			// btnAdd
+			// btnPrint
 			// 
-			btnAdd.BackColor = Color.OrangeRed;
-			btnAdd.Cursor = Cursors.Hand;
-			btnAdd.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold, GraphicsUnit.Point);
-			btnAdd.ForeColor = Color.White;
-			btnAdd.Location = new Point(761, 470);
-			btnAdd.Name = "btnAdd";
-			btnAdd.Size = new Size(96, 37);
-			btnAdd.TabIndex = 23;
-			btnAdd.Text = "Imprimir";
-			btnAdd.UseVisualStyleBackColor = false;
+			btnPrint.BackColor = Color.OrangeRed;
+			btnPrint.Cursor = Cursors.Hand;
+			btnPrint.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			btnPrint.ForeColor = Color.White;
+			btnPrint.Location = new Point(761, 470);
+			btnPrint.Name = "btnPrint";
+			btnPrint.Size = new Size(96, 37);
+			btnPrint.TabIndex = 23;
+			btnPrint.Text = "Imprimir";
+			btnPrint.UseVisualStyleBackColor = false;
+			btnPrint.Click += btnPrint_Click;
 			// 
 			// EmpDaysTb
 			// 
@@ -242,7 +248,22 @@
 			label2.TabIndex = 6;
 			label2.Text = "ID do Empregado";
 			// 
-			// Salary
+			// printDocument1
+			// 
+			printDocument1.PrintPage += printDocument1_PrintPage;
+			// 
+			// printPreviewDialog1
+			// 
+			printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
+			printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
+			printPreviewDialog1.ClientSize = new Size(400, 300);
+			printPreviewDialog1.Document = printDocument1;
+			printPreviewDialog1.Enabled = true;
+			printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
+			printPreviewDialog1.Name = "printPreviewDialog1";
+			printPreviewDialog1.Visible = false;
+			// 
+			// SalaryEmployee
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
@@ -253,7 +274,7 @@
 			Controls.Add(btnExit);
 			Controls.Add(label1);
 			FormBorderStyle = FormBorderStyle.None;
-			Name = "Salary";
+			Name = "SalaryEmployee";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Salary";
 			Load += Salary_Load;
@@ -273,8 +294,8 @@
 		private Panel panel1;
 		private Button btnHome;
 		private Button btnSearch;
-		private Button btnEdit;
-		private Button btnAdd;
+		private Button btnView;
+		private Button btnPrint;
 		private TextBox EmpDaysTb;
 		private Label label7;
 		private Label label6;
@@ -284,5 +305,7 @@
 		private TextBox EmpIdTb;
 		private Label label2;
 		private RichTextBox SalarySlip;
+		private System.Drawing.Printing.PrintDocument printDocument1;
+		private PrintPreviewDialog printPreviewDialog1;
 	}
 }

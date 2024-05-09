@@ -64,15 +64,18 @@ namespace EmpManagement
 			this.Hide();
 		}
 
-		private void pictureBox4_Click(object sender, EventArgs e)
+		private void pbSalary_Click(object sender, EventArgs e)
 		{
-			Salary salary = new Salary();
-			salary.Show();
-			salary.Hide();
+			SalaryEmployee emp = new SalaryEmployee();
+			emp.Show();
+			this.Hide();
 		}
 
-		private void label5_Click(object sender, EventArgs e)
+		private void lblSalary_Click(object sender, EventArgs e)
 		{
+			SalaryEmployee emp = new SalaryEmployee();
+			emp.Show();
+			this.Hide();
 		}
 	}
 }

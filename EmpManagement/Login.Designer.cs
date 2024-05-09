@@ -31,11 +31,11 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
-			textBox1 = new TextBox();
-			textBox2 = new TextBox();
+			UIdTb = new TextBox();
+			PassTb = new TextBox();
 			label2 = new Label();
 			label3 = new Label();
-			button1 = new Button();
+			btnLogin = new Button();
 			button2 = new Button();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -61,21 +61,22 @@
 			pictureBox1.TabIndex = 2;
 			pictureBox1.TabStop = false;
 			// 
-			// textBox1
+			// UIdTb
 			// 
-			textBox1.BorderStyle = BorderStyle.FixedSingle;
-			textBox1.Location = new Point(281, 90);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(199, 23);
-			textBox1.TabIndex = 3;
+			UIdTb.BorderStyle = BorderStyle.FixedSingle;
+			UIdTb.Location = new Point(281, 90);
+			UIdTb.Name = "UIdTb";
+			UIdTb.Size = new Size(199, 23);
+			UIdTb.TabIndex = 3;
 			// 
-			// textBox2
+			// PassTb
 			// 
-			textBox2.BorderStyle = BorderStyle.FixedSingle;
-			textBox2.Location = new Point(281, 149);
-			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(199, 23);
-			textBox2.TabIndex = 4;
+			PassTb.BorderStyle = BorderStyle.FixedSingle;
+			PassTb.Location = new Point(281, 149);
+			PassTb.Name = "PassTb";
+			PassTb.PasswordChar = '*';
+			PassTb.Size = new Size(199, 23);
+			PassTb.TabIndex = 4;
 			// 
 			// label2
 			// 
@@ -99,17 +100,18 @@
 			label3.TabIndex = 6;
 			label3.Text = "Senha";
 			// 
-			// button1
+			// btnLogin
 			// 
-			button1.BackColor = Color.OrangeRed;
-			button1.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold, GraphicsUnit.Point);
-			button1.ForeColor = Color.White;
-			button1.Location = new Point(405, 204);
-			button1.Name = "button1";
-			button1.Size = new Size(75, 33);
-			button1.TabIndex = 7;
-			button1.Text = "Login";
-			button1.UseVisualStyleBackColor = false;
+			btnLogin.BackColor = Color.OrangeRed;
+			btnLogin.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			btnLogin.ForeColor = Color.White;
+			btnLogin.Location = new Point(405, 204);
+			btnLogin.Name = "btnLogin";
+			btnLogin.Size = new Size(75, 33);
+			btnLogin.TabIndex = 7;
+			btnLogin.Text = "Login";
+			btnLogin.UseVisualStyleBackColor = false;
+			btnLogin.Click += btnLogin_Click;
 			// 
 			// button2
 			// 
@@ -122,6 +124,7 @@
 			button2.TabIndex = 8;
 			button2.Text = "Limpar";
 			button2.UseVisualStyleBackColor = false;
+			button2.Click += button2_Click;
 			// 
 			// Login
 			// 
@@ -129,11 +132,11 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(516, 261);
 			Controls.Add(button2);
-			Controls.Add(button1);
+			Controls.Add(btnLogin);
 			Controls.Add(label3);
 			Controls.Add(label2);
-			Controls.Add(textBox2);
-			Controls.Add(textBox1);
+			Controls.Add(PassTb);
+			Controls.Add(UIdTb);
 			Controls.Add(pictureBox1);
 			Controls.Add(label1);
 			FormBorderStyle = FormBorderStyle.None;
@@ -149,11 +152,11 @@
 
 		private Label label1;
 		private PictureBox pictureBox1;
-		private TextBox textBox1;
-		private TextBox textBox2;
+		private TextBox UIdTb;
+		private TextBox PassTb;
 		private Label label2;
 		private Label label3;
-		private Button button1;
+		private Button btnLogin;
 		private Button button2;
 	}
 }

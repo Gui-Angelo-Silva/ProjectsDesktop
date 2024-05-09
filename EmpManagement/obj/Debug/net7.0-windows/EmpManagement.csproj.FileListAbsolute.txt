@@ -14,7 +14,6 @@ C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\
 C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\EmpManagement.Home.resources
 C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\EmpManagement.Login.resources
 C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\EmpManagement.Properties.Resources.resources
-C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\EmpManagement.Salary.resources
 C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\EmpManagement.Splash.resources
 C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\EmpManagement.ViewEmployee.resources
 C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\EmpManagement.csproj.GenerateResource.cache
@@ -28,3 +27,4 @@ C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\
 C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\EmpManagement.pdb
 C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\EmpManagement.genruntimeconfig.cache
 C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\ref\EmpManagement.dll
+C:\Users\Aluno\Documents\ProjectsDesktop\EmpManagement\obj\Debug\net7.0-windows\EmpManagement.SalaryEmployee.resources

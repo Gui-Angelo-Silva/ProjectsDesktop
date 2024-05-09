@@ -10,7 +10,7 @@
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Salary.cs">
+    <Compile Update="SalaryEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Splash.cs">

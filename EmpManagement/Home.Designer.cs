@@ -33,8 +33,8 @@
 			label1 = new Label();
 			label2 = new Label();
 			panel1 = new Panel();
-			label5 = new Label();
-			pictureBox4 = new PictureBox();
+			lblSalary = new Label();
+			pbSalary = new PictureBox();
 			label4 = new Label();
 			pictureBox3 = new PictureBox();
 			label3 = new Label();
@@ -44,7 +44,7 @@
 			btnExit = new PictureBox();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			panel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+			((System.ComponentModel.ISupportInitialize)pbSalary).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -86,8 +86,8 @@
 			// panel1
 			// 
 			panel1.BackColor = Color.White;
-			panel1.Controls.Add(label5);
-			panel1.Controls.Add(pictureBox4);
+			panel1.Controls.Add(lblSalary);
+			panel1.Controls.Add(pbSalary);
 			panel1.Controls.Add(label4);
 			panel1.Controls.Add(pictureBox3);
 			panel1.Controls.Add(label3);
@@ -98,30 +98,30 @@
 			panel1.Size = new Size(803, 315);
 			panel1.TabIndex = 0;
 			// 
-			// label5
+			// lblSalary
 			// 
-			label5.AutoSize = true;
-			label5.Cursor = Cursors.Hand;
-			label5.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-			label5.ForeColor = Color.OrangeRed;
-			label5.Location = new Point(598, 221);
-			label5.Name = "label5";
-			label5.Size = new Size(77, 23);
-			label5.TabIndex = 8;
-			label5.Text = "Salário";
-			label5.Click += label5_Click;
+			lblSalary.AutoSize = true;
+			lblSalary.Cursor = Cursors.Hand;
+			lblSalary.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+			lblSalary.ForeColor = Color.OrangeRed;
+			lblSalary.Location = new Point(598, 221);
+			lblSalary.Name = "lblSalary";
+			lblSalary.Size = new Size(77, 23);
+			lblSalary.TabIndex = 8;
+			lblSalary.Text = "Salário";
+			lblSalary.Click += lblSalary_Click;
 			// 
-			// pictureBox4
+			// pbSalary
 			// 
-			pictureBox4.Cursor = Cursors.Hand;
-			pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-			pictureBox4.Location = new Point(583, 93);
-			pictureBox4.Name = "pictureBox4";
-			pictureBox4.Size = new Size(99, 110);
-			pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-			pictureBox4.TabIndex = 7;
-			pictureBox4.TabStop = false;
-			pictureBox4.Click += pictureBox4_Click;
+			pbSalary.Cursor = Cursors.Hand;
+			pbSalary.Image = (Image)resources.GetObject("pbSalary.Image");
+			pbSalary.Location = new Point(583, 93);
+			pbSalary.Name = "pbSalary";
+			pbSalary.Size = new Size(99, 110);
+			pbSalary.SizeMode = PictureBoxSizeMode.Zoom;
+			pbSalary.TabIndex = 7;
+			pbSalary.TabStop = false;
+			pbSalary.Click += pbSalary_Click;
 			// 
 			// label4
 			// 
@@ -227,7 +227,7 @@
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+			((System.ComponentModel.ISupportInitialize)pbSalary).EndInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -241,8 +241,8 @@
 		private Label label1;
 		private Label label2;
 		private Panel panel1;
-		private Label label5;
-		private PictureBox pictureBox4;
+		private Label lblSalary;
+		private PictureBox pbSalary;
 		private Label label4;
 		private PictureBox pictureBox3;
 		private Label label3;

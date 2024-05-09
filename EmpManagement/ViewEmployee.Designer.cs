@@ -34,7 +34,7 @@
 			label1 = new Label();
 			panel1 = new Panel();
 			btnHome = new Button();
-			button1 = new Button();
+			btnPrint = new Button();
 			Empdoblbl = new Label();
 			Empedulbl = new Label();
 			Empgenlbl = new Label();
@@ -54,6 +54,8 @@
 			btnRefresh = new Button();
 			EmpIdTb = new TextBox();
 			label2 = new Label();
+			printDocument1 = new System.Drawing.Printing.PrintDocument();
+			printPreviewDialog1 = new PrintPreviewDialog();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			((System.ComponentModel.ISupportInitialize)btnExit).BeginInit();
 			panel1.SuspendLayout();
@@ -96,7 +98,7 @@
 			// 
 			panel1.BackColor = Color.White;
 			panel1.Controls.Add(btnHome);
-			panel1.Controls.Add(button1);
+			panel1.Controls.Add(btnPrint);
 			panel1.Controls.Add(Empdoblbl);
 			panel1.Controls.Add(Empedulbl);
 			panel1.Controls.Add(Empgenlbl);
@@ -135,18 +137,19 @@
 			btnHome.UseVisualStyleBackColor = false;
 			btnHome.Click += btnHome_Click;
 			// 
-			// button1
+			// btnPrint
 			// 
-			button1.BackColor = Color.OrangeRed;
-			button1.Cursor = Cursors.Hand;
-			button1.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold, GraphicsUnit.Point);
-			button1.ForeColor = Color.White;
-			button1.Location = new Point(646, 451);
-			button1.Name = "button1";
-			button1.Size = new Size(96, 37);
-			button1.TabIndex = 41;
-			button1.Text = "Imprimir";
-			button1.UseVisualStyleBackColor = false;
+			btnPrint.BackColor = Color.OrangeRed;
+			btnPrint.Cursor = Cursors.Hand;
+			btnPrint.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			btnPrint.ForeColor = Color.White;
+			btnPrint.Location = new Point(646, 451);
+			btnPrint.Name = "btnPrint";
+			btnPrint.Size = new Size(96, 37);
+			btnPrint.TabIndex = 41;
+			btnPrint.Text = "Imprimir";
+			btnPrint.UseVisualStyleBackColor = false;
+			btnPrint.Click += btnPrint_Click;
 			// 
 			// Empdoblbl
 			// 
@@ -355,6 +358,22 @@
 			label2.TabIndex = 8;
 			label2.Text = "ID do Empregado";
 			// 
+			// printDocument1
+			// 
+			printDocument1.PrintPage += printDocument1_PrintPage;
+			// 
+			// printPreviewDialog1
+			// 
+			printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
+			printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
+			printPreviewDialog1.ClientSize = new Size(400, 300);
+			printPreviewDialog1.Document = printDocument1;
+			printPreviewDialog1.Enabled = true;
+			printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
+			printPreviewDialog1.Name = "printPreviewDialog1";
+			printPreviewDialog1.Visible = false;
+			printPreviewDialog1.Load += printPreviewDialog1_Load;
+			// 
 			// ViewEmployee
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -404,6 +423,8 @@
 		private Label Empgenlbl;
 		private Label Empnamelbl;
 		private Button btnHome;
-		private Button button1;
+		private Button btnPrint;
+		private System.Drawing.Printing.PrintDocument printDocument1;
+		private PrintPreviewDialog printPreviewDialog1;
 	}
 }
