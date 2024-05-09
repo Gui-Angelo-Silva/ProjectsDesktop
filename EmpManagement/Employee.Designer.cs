@@ -31,7 +31,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
 			label1 = new Label();
 			panel1 = new Panel();
-			dataGridView1 = new DataGridView();
+			EmpDGV = new DataGridView();
 			btnHome = new Button();
 			btnDelete = new Button();
 			btnEdit = new Button();
@@ -55,7 +55,7 @@
 			btnExit = new PictureBox();
 			pictureBox2 = new PictureBox();
 			panel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)EmpDGV).BeginInit();
 			((System.ComponentModel.ISupportInitialize)btnExit).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			SuspendLayout();
@@ -74,7 +74,7 @@
 			// panel1
 			// 
 			panel1.BackColor = Color.White;
-			panel1.Controls.Add(dataGridView1);
+			panel1.Controls.Add(EmpDGV);
 			panel1.Controls.Add(btnHome);
 			panel1.Controls.Add(btnDelete);
 			panel1.Controls.Add(btnEdit);
@@ -100,14 +100,17 @@
 			panel1.Size = new Size(1180, 494);
 			panel1.TabIndex = 4;
 			// 
-			// dataGridView1
+			// EmpDGV
 			// 
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(474, 17);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.RowTemplate.Height = 25;
-			dataGridView1.Size = new Size(685, 458);
-			dataGridView1.TabIndex = 27;
+			EmpDGV.BackgroundColor = Color.White;
+			EmpDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			EmpDGV.Location = new Point(474, 17);
+			EmpDGV.Name = "EmpDGV";
+			EmpDGV.RowTemplate.Height = 25;
+			EmpDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+			EmpDGV.Size = new Size(685, 458);
+			EmpDGV.TabIndex = 27;
+			EmpDGV.CellContentClick += EmpDGV_CellContentClick;
 			// 
 			// btnHome
 			// 
@@ -121,6 +124,7 @@
 			btnHome.TabIndex = 26;
 			btnHome.Text = "Página Inicial";
 			btnHome.UseVisualStyleBackColor = false;
+			btnHome.Click += btnHome_Click;
 			// 
 			// btnDelete
 			// 
@@ -134,6 +138,7 @@
 			btnDelete.TabIndex = 25;
 			btnDelete.Text = "Excluir";
 			btnDelete.UseVisualStyleBackColor = false;
+			btnDelete.Click += btnDelete_Click;
 			// 
 			// btnEdit
 			// 
@@ -147,6 +152,7 @@
 			btnEdit.TabIndex = 24;
 			btnEdit.Text = "Editar";
 			btnEdit.UseVisualStyleBackColor = false;
+			btnEdit.Click += btnEdit_Click;
 			// 
 			// btnAdd
 			// 
@@ -351,7 +357,7 @@
 			Load += Employee_Load;
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+			((System.ComponentModel.ISupportInitialize)EmpDGV).EndInit();
 			((System.ComponentModel.ISupportInitialize)btnExit).EndInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
 			ResumeLayout(false);
@@ -381,7 +387,7 @@
 		private Button btnDelete;
 		private Button btnEdit;
 		private Button btnAdd;
-		private DataGridView dataGridView1;
+		private DataGridView EmpDGV;
 		private Button btnHome;
 		private PictureBox btnExit;
 		private PictureBox pictureBox2;

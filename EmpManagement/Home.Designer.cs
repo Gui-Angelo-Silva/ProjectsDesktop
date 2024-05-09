@@ -41,12 +41,14 @@
 			pictureBox2 = new PictureBox();
 			pictureBox5 = new PictureBox();
 			label6 = new Label();
+			btnExit = new PictureBox();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+			((System.ComponentModel.ISupportInitialize)btnExit).BeginInit();
 			SuspendLayout();
 			// 
 			// pictureBox1
@@ -64,7 +66,7 @@
 			label1.AutoSize = true;
 			label1.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label1.ForeColor = Color.White;
-			label1.Location = new Point(97, 47);
+			label1.Location = new Point(94, 31);
 			label1.Name = "label1";
 			label1.Size = new Size(82, 23);
 			label1.TabIndex = 2;
@@ -141,6 +143,7 @@
 			// label3
 			// 
 			label3.AutoSize = true;
+			label3.Cursor = Cursors.Hand;
 			label3.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label3.ForeColor = Color.OrangeRed;
 			label3.Location = new Point(124, 221);
@@ -148,9 +151,11 @@
 			label3.Size = new Size(126, 23);
 			label3.TabIndex = 4;
 			label3.Text = "Empregados";
+			label3.Click += label3_Click;
 			// 
 			// pictureBox2
 			// 
+			pictureBox2.Cursor = Cursors.Hand;
 			pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
 			pictureBox2.Location = new Point(134, 93);
 			pictureBox2.Name = "pictureBox2";
@@ -158,6 +163,7 @@
 			pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
 			pictureBox2.TabIndex = 3;
 			pictureBox2.TabStop = false;
+			pictureBox2.Click += pictureBox2_Click;
 			// 
 			// pictureBox5
 			// 
@@ -168,6 +174,7 @@
 			pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
 			pictureBox5.TabIndex = 3;
 			pictureBox5.TabStop = false;
+			pictureBox5.Click += pictureBox5_Click;
 			// 
 			// label6
 			// 
@@ -179,6 +186,19 @@
 			label6.Size = new Size(48, 23);
 			label6.TabIndex = 4;
 			label6.Text = "Sair";
+			label6.Click += label6_Click;
+			// 
+			// btnExit
+			// 
+			btnExit.Cursor = Cursors.Hand;
+			btnExit.Image = (Image)resources.GetObject("btnExit.Image");
+			btnExit.Location = new Point(756, 12);
+			btnExit.Name = "btnExit";
+			btnExit.Size = new Size(32, 42);
+			btnExit.SizeMode = PictureBoxSizeMode.Zoom;
+			btnExit.TabIndex = 6;
+			btnExit.TabStop = false;
+			btnExit.Click += btnExit_Click;
 			// 
 			// Home
 			// 
@@ -186,6 +206,7 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.OrangeRed;
 			ClientSize = new Size(800, 454);
+			Controls.Add(btnExit);
 			Controls.Add(label6);
 			Controls.Add(pictureBox5);
 			Controls.Add(label1);
@@ -193,6 +214,7 @@
 			Controls.Add(panel1);
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "Home";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Home";
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			panel1.ResumeLayout(false);
@@ -201,6 +223,7 @@
 			((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+			((System.ComponentModel.ISupportInitialize)btnExit).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -218,5 +241,6 @@
 		private PictureBox pictureBox2;
 		private PictureBox pictureBox5;
 		private Label label6;
+		private PictureBox btnExit;
 	}
 }
