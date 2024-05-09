@@ -49,5 +49,30 @@ namespace EmpManagement
 			login.Show();
 			this.Hide();
 		}
+
+		private void pictureBox3_Click(object sender, EventArgs e)
+		{
+			ViewEmployee viewEmployee = new ViewEmployee();
+			viewEmployee.Show();
+			this.Hide();
+		}
+
+		private void label4_Click(object sender, EventArgs e)
+		{
+			ViewEmployee viewEmployee = new ViewEmployee();
+			viewEmployee.Show();
+			this.Hide();
+		}
+
+		private void pictureBox4_Click(object sender, EventArgs e)
+		{
+			Salary salary = new Salary();
+			salary.Show();
+			salary.Hide();
+		}
+
+		private void label5_Click(object sender, EventArgs e)
+		{
+		}
 	}
 }

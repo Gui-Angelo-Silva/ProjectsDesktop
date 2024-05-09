@@ -11,15 +11,19 @@ using System.Windows.Forms;
 
 namespace EmpManagement
 {
-	public partial class ViewEmployee : Form
+	public partial class Salary : Form
 	{
-		public ViewEmployee()
+		public Salary()
 		{
 			InitializeComponent();
 		}
 
 		SqlConnection Con = new SqlConnection(@"Data Source=LAPTOP-QA5LC4CN;Initial Catalog=DBSisGEP;Integrated Security=True;TrustServerCertificate=True");
 
+		private void Salary_Load(object sender, EventArgs e)
+		{
+
+		}
 		private void fetchempdata()
 		{
 			Con.Open();
@@ -31,46 +35,28 @@ namespace EmpManagement
 
 			foreach (DataRow dr in dt.Rows)
 			{
-				Empidlbl.Text = dr["EmpId"].ToString();
-				Empnamelbl.Text = dr["EmpName"].ToString();
-				Empaddlbl.Text = dr["EmpAdd"].ToString();
-				Empposlbl.Text = dr["EmpPos"].ToString();
-				Empphonelbl.Text = dr["EmPhone"].ToString();
-				Empedulbl.Text = dr["EmpEdu"].ToString();
-				Empgenlbl.Text = dr["EmpGen"].ToString();
-				Empdoblbl.Text = dr["EmpDOB"].ToString();
-				Empidlbl.Visible = true;
-				Empnamelbl.Visible = true;
-				Empaddlbl.Visible = true;
-				Empposlbl.Visible = true;
-				Empphonelbl.Visible = true;
-				Empedulbl.Visible = true;
-				Empgenlbl.Visible = true;
-				Empdoblbl.Visible = true;
+				lblNameEmp.Text = dr["EmpName"].ToString();
+				EmpPosTb.Text = dr["EmpPos"].ToString();
 			}
 
-		}
-
-		private void ViewEmployee_Load(object sender, EventArgs e)
-		{
-
-		}
-
-		private void btnExit_Click(object sender, EventArgs e)
-		{
-			Application.Exit();
 		}
 
 		private void btnHome_Click(object sender, EventArgs e)
 		{
 			Home home = new Home();
 			home.Show();
-			this.Hide();
+			home.Hide();
 		}
 
-		private void btnRefresh_Click(object sender, EventArgs e)
+
+		private void btnSearch_Click(object sender, EventArgs e)
 		{
 			fetchempdata();
+		}
+
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }

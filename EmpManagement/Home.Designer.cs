@@ -101,6 +101,7 @@
 			// label5
 			// 
 			label5.AutoSize = true;
+			label5.Cursor = Cursors.Hand;
 			label5.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label5.ForeColor = Color.OrangeRed;
 			label5.Location = new Point(598, 221);
@@ -108,9 +109,11 @@
 			label5.Size = new Size(77, 23);
 			label5.TabIndex = 8;
 			label5.Text = "Salário";
+			label5.Click += label5_Click;
 			// 
 			// pictureBox4
 			// 
+			pictureBox4.Cursor = Cursors.Hand;
 			pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
 			pictureBox4.Location = new Point(583, 93);
 			pictureBox4.Name = "pictureBox4";
@@ -118,10 +121,12 @@
 			pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
 			pictureBox4.TabIndex = 7;
 			pictureBox4.TabStop = false;
+			pictureBox4.Click += pictureBox4_Click;
 			// 
 			// label4
 			// 
 			label4.AutoSize = true;
+			label4.Cursor = Cursors.Hand;
 			label4.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
 			label4.ForeColor = Color.OrangeRed;
 			label4.Location = new Point(374, 221);
@@ -129,9 +134,11 @@
 			label4.Size = new Size(106, 23);
 			label4.TabIndex = 6;
 			label4.Text = "Visualizar";
+			label4.Click += label4_Click;
 			// 
 			// pictureBox3
 			// 
+			pictureBox3.Cursor = Cursors.Hand;
 			pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
 			pictureBox3.Location = new Point(374, 93);
 			pictureBox3.Name = "pictureBox3";
@@ -139,6 +146,7 @@
 			pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
 			pictureBox3.TabIndex = 5;
 			pictureBox3.TabStop = false;
+			pictureBox3.Click += pictureBox3_Click;
 			// 
 			// label3
 			// 
